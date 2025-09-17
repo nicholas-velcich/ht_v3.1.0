@@ -1,0 +1,4 @@
+
+zephyr_library()
+zephyr_library_sources_ifdef(CONFIG_PWR_DETECT pwr_detect.c)
+zephyr_library_sources_ifdef(CONFIG_PWR_DETECT_SHELL pwr_detect_shell.c)

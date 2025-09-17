@@ -1,0 +1,16 @@
+board:
+  name: iothub
+  full_name: IOTHUB
+  vendor: nordic
+  socs:
+  - name: nrf54h20
+    variants:
+    - name: xip
+      cpucluster: cpuppr
+    - name: xip
+      cpucluster: cpuflpr
+  revision:
+    format: major.minor.patch
+    default: "0.9.0"
+    revisions:
+    - name: "0.9.0"

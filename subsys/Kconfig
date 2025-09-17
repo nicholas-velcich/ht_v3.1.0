@@ -1,0 +1,6 @@
+
+menu "Winegard Subsystems"
+# zephyr-keep-sorted-start
+rsource "pwr_detect/Kconfig"
+# zephyr-keep-sorted-stop
+endmenu

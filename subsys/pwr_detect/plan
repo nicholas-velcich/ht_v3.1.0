@@ -1,0 +1,12 @@
+Interupt driven power source detection based on ADC reading of a gpio pin
+
+be able to request current power source from API
+	ADC reading
+	mV reading
+	Source string
+
+Shell integration
+
+All features controlled through kconfig
+
+

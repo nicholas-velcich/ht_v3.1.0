@@ -1,0 +1,36 @@
+
+
+
+menuconfig PWR_DETECT
+	bool "Power Detection Subsystem"
+	default n
+	help
+		This option enables the power detection subsystem.
+
+menuconfig PWR_DETECT_LOG_LEVEL
+	int "Power Detection Log Level"
+	default 3
+	depends on PWR_DETECT
+	help
+		Set the log level for the power detection subsystem.
+		0 - None
+		1 - Error
+		2 - Warning
+		3 - Info
+		4 - Debug
+
+menuconfig PWR_DETECT_SAMPLE_RATE
+	int "Power Detection Sample Rate (Hz)"
+	default 1
+	depends on PWR_DETECT
+	help
+		Set the sample rate for power detection in Hertz.
+
+menuconfig PWR_DETECT_SHELL
+	bool "Enable Power Detection Shell Commands"
+	default n
+	depends on PWR_DETECT
+	select SHELL_GETOPT
+	help
+		Enable shell commands for interacting with the power detection subsystem.				
+
