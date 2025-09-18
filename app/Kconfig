@@ -6,9 +6,9 @@
 # You can browse these options using the west targets menuconfig (terminal) or
 # guiconfig (GUI).
 
-menu "Zephyr"
-source "Kconfig.zephyr"
-endmenu
+#menu "Zephyr"
+#source "Kconfig.zephyr"
+#endmenu
 
 menu "Nordic Shell sample"
 

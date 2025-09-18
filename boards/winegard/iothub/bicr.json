@@ -7,7 +7,7 @@
     "p2Supply": "EXTERNAL_1V8",
     "p6Supply": "EXTERNAL_1V8",
     "p7Supply": "EXTERNAL_1V8",
-    "p9Supply": "EXTERNAL_FULL"
+    "p9Supply": "EXTERNAL_1V8"
   },
   "ioPortImpedance": {
     "p6ImpedanceOhms": 50,

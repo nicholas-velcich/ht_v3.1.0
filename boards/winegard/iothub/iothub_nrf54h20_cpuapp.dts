@@ -8,7 +8,7 @@
 
 #include <nordic/nrf54h20_cpuapp.dtsi>
 #include "iothub_nrf54h20-common.dtsi"
-#include "nrf7002/nrf54h20_cpuapp.overlay"
+//#include "nrf7002/nrf54h20_cpuapp.overlay"
 
 /delete-node/ &cpurad_cpusys_ipc;
 /delete-node/ &cpusec_cpurad_ipc;
@@ -19,6 +19,8 @@
 
 	chosen {
 		zephyr,console = &uart136;
+		/* Wifi device for DT_CHOSEN(zephyr_wifi) used by nrf_wifi/wpa_supp_if.c */
+		zephyr,wifi = &wlan0;
 		zephyr,code-partition = &slot0_partition;
 		zephyr,flash = &mram1x;
 		zephyr,sram = &cpuapp_data;
@@ -33,9 +35,9 @@
 	};
 
 	aliases {
-		green-led = &led0;
-		red-led = &led1;
-		blue-led = &led2;
+		greenled = &led0;
+		redled = &led1;
+		blueled = &led2;
 		resetinfo = &cpuapp_resetinfo;
 		sw0 = &button0;
 		ipc-to-cpusys = &cpuapp_cpusys_ipc;
@@ -217,13 +219,6 @@ slot3_partition: &cpurad_slot1_partition {
 	child-owned-channels = <5 6>;
 	nonsecure-channels = <5 6>;
 	owned-channels = <4 5 6>;
-};
-
-&uart120 {
-	current-speed = <115200>;
-	pinctrl-0 = <&uart120_default>;
-	pinctrl-1 = <&uart120_sleep>;
-	pinctrl-names = "default", "sleep";
 };
 
 &uart135 {

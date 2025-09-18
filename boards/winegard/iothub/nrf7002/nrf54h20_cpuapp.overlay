@@ -31,6 +31,7 @@
 	};
 };
 
+/* Reinstate the overlay RAM region override as it was previously. */
 /delete-node/ &cpurad_ram0x_region;
 &cpuapp_ram0x_region {
 	status = "okay";
